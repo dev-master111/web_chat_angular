@@ -13,7 +13,8 @@ export class UserService {
   private _socket;
 
   constructor() {
-    this._socket = io.connect('http://localhost:3000', { secure: true, reconnect: true, rejectUnauthorized : false });
+    // this._socket = io.connect('https://webchat18api.herokuapp.com/chat', { secure: true, reconnect: true, rejectUnauthorized : false });
+    this._socket = io.connect('http://localhost/chat', { secure: true, reconnect: true, rejectUnauthorized : false });
     this.waitMessages();
     this.getPreviousMessages();
   }
