@@ -13,7 +13,7 @@ export class UserService {
   private _socket;
 
   constructor() {
-    this._socket = io('https://webchat18api.herokuapp.com:3000');
+    this._socket = io('https://webchat18api.herokuapp.com:3000', {secure: true});
     this.waitMessages();
     this.getPreviousMessages();
   }

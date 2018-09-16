@@ -12,7 +12,7 @@ export class SocketService {
   }
 
   initiateSocket() {
-    this.socket = io('https://webchat18api.herokuapp.com:3000');
+    this.socket = io('https://webchat18api.herokuapp.com:3000', {secure: true});
   }
 
   initiateUsers() {
