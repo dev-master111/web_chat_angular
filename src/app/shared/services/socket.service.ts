@@ -12,7 +12,7 @@ export class SocketService {
   }
 
   initiateSocket() {
-    this.socket = io.connect('https://webchat18api.herokuapp.com:3000', {secure: true, rejectUnauthorized : false});
+    this.socket = io.connect('http://localhost:3000', { secure: true, reconnect: true, rejectUnauthorized : false });
   }
 
   initiateUsers() {
