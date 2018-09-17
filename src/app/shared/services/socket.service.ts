@@ -12,8 +12,8 @@ export class SocketService {
   }
 
   initiateSocket() {
-    // this.socket = io.connect('https://webchat18api.herokuapp.com/chat', { secure: true, reconnect: true, rejectUnauthorized : false });
-    this.socket = io.connect('http://localhost/chat', { secure: true, reconnect: true, rejectUnauthorized : false });
+    this.socket = io.connect('https://webchat18api.herokuapp.com:8080', { secure: true, reconnect: true, rejectUnauthorized : false });
+    // this.socket = io.connect('http://localhost:8080', { secure: true, reconnect: true, rejectUnauthorized : false });
   }
 
   initiateUsers() {
